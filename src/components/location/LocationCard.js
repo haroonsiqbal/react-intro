@@ -5,12 +5,10 @@ class LocationCard extends Component {
     return (
       <div className="card">
         <div className="card-content">
-          <h3>Locations</h3>
-          <p>North Nashville</p>
-          <p>South Nashville</p>
-          <p>West End</p>
-          <p>Green Hills</p>
+          <h3>Name: <span className="card-petname">{this.props.location.name}</span></h3>
+          <p>Address: {this.props.location.address}</p>
         </div>
+        <button type="button" onClick={() => this.props.deleteLocation(this.props.location.id)}>Close</button>
       </div>
     );
   }

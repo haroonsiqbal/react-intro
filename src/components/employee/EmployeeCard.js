@@ -5,12 +5,9 @@ class EmployeeCard extends Component {
     return (
       <div className="card">
         <div className="card-content">
-          <h3>Employees</h3>
-          <p>Haroon Iqbal</p>
-          <p>M Stiles</p>
-          <p>Ellie Ash</p>
-          <p>Bennett Foster</p>
+          <h3>Name: <span className="card-petname">{this.props.employee.name}</span> </h3>
         </div>
+        <button type="button" onClick={() => this.props.deleteEmployee(this.props.employee.id)}>Fire</button>
       </div>
     );
   }
