@@ -36,6 +36,14 @@ render(){
     console.log("LOCATION LIST: Render");
 
     return(
+    <React.Fragment>
+    <section className="section-content">
+    <button type="button"
+      className="btn"
+      onClick={() => {this.props.history.push("/locations/new")}}>
+      Open Location
+    </button>
+    </section>
         <div className="container-cards">
         {this.state.locations.map(location =>
           <LocationCard
@@ -45,6 +53,7 @@ render(){
             />
         )}
       </div>
+      </React.Fragment>
     )
 }
 }
