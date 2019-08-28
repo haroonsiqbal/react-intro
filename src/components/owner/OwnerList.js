@@ -47,6 +47,7 @@ render(){
         <div className="container-cards">
       {this.state.owners.map(owner =>
         <OwnerCard
+            {...this.props}    
             key={owner.id}
             owner={owner}
             deleteOwner={this.deleteOwner}
